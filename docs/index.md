@@ -10,7 +10,7 @@ GithubのRepoに[Issues](https://github.com/FaBoPlatform/AutowareDocs/issues)を
 
 ## その他のドキュメント
 
-- [Autoware Docs](https://faboplatform.github.io/AutowareDocs/))
+- [Autoware Docs](https://faboplatform.github.io/AutowareDocs/)
 - [LoRa Docs](https://faboplatform.github.io/LoRaDocs/)
 - [Android Things Docs](https://faboplatform.github.io/AndroidThingsDocs/)
 - [DonkeyCar Docs](https://faboplatform.github.io/DonkeyDocs/)
