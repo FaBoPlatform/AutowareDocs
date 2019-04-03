@@ -36,7 +36,7 @@
     
     
       
-        <title>Docker の使い方 - Autoware Docs</title>
+        <title>VLP-16のデータをROS RVizで確認 - Autoware Docs</title>
       
     
     
@@ -79,7 +79,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#docker" tabindex="1" class="md-skip">
+      <a href="#vlp-16ros-rviz" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -104,7 +104,7 @@
               Autoware Docs
             </span>
             <span class="md-header-nav__topic">
-              Docker の使い方
+              VLP-16のデータをROS RVizで確認
             </span>
           
         </div>
@@ -182,12 +182,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       00.Install
@@ -205,7 +203,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../00.TX2_setup/" title="Jetson TX2 セットアップ" class="md-nav__link">
+    <a href="../../00.Install/00.TX2_setup/" title="Jetson TX2 セットアップ" class="md-nav__link">
       Jetson TX2 セットアップ
     </a>
   </li>
@@ -217,8 +215,58 @@
 
 
   <li class="md-nav__item">
-    <a href="../01.Autoware_Install/" title="Autoware インストール" class="md-nav__link">
+    <a href="../../00.Install/01.Autoware_Install/" title="Autoware インストール" class="md-nav__link">
       Autoware インストール
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../00.Install/02.Docker/" title="Docker の使い方" class="md-nav__link">
+      Docker の使い方
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      01.Velodyne VLP 16
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        01.Velodyne VLP 16
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../00.Network/" title="VLP-16 ネットワーク設定" class="md-nav__link">
+      VLP-16 ネットワーク設定
     </a>
   </li>
 
@@ -238,11 +286,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Docker の使い方
+        VLP-16のデータをROS RVizで確認
       </label>
     
-    <a href="./" title="Docker の使い方" class="md-nav__link md-nav__link--active">
-      Docker の使い方
+    <a href="./" title="VLP-16のデータをROS RVizで確認" class="md-nav__link md-nav__link--active">
+      VLP-16のデータをROS RVizで確認
     </a>
     
       
@@ -256,51 +304,37 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#docker_1" title="【Dockerの使い方】" class="md-nav__link">
-    【Dockerの使い方】
+  <a href="#autoware" title="【Autowareコンテナを起動】" class="md-nav__link">
+    【Autowareコンテナを起動】
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vlp-16ros-rviz_1" title="【VLP-16のデータをROS RVizで確認】" class="md-nav__link">
+    【VLP-16のデータをROS RVizで確認】
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#docker-pull" title="docker pull" class="md-nav__link">
-    docker pull
+  <a href="#ros" title="ROSを起動" class="md-nav__link">
+    ROSを起動
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#docker-images" title="docker images" class="md-nav__link">
-    docker images
+  <a href="#_1" title="コマンドラインでの確認" class="md-nav__link">
+    コマンドラインでの確認
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#docker-run" title="docker run" class="md-nav__link">
-    docker run
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-ps" title="docker ps" class="md-nav__link">
-    docker ps
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-start" title="docker start" class="md-nav__link">
-    docker start
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-stop" title="docker stop" class="md-nav__link">
-    docker stop
+  <a href="#rviz" title="RVizでの確認" class="md-nav__link">
+    RVizでの確認
   </a>
   
 </li>
@@ -318,54 +352,6 @@
   
 </nav>
     
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
-    <label class="md-nav__link" for="nav-3">
-      01.Velodyne VLP 16
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        01.Velodyne VLP 16
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../01.Velodyne_VLP-16/00.Network/" title="VLP-16 ネットワーク設定" class="md-nav__link">
-      VLP-16 ネットワーク設定
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../01.Velodyne_VLP-16/01.Ros_rviz/" title="VLP-16のデータをROS RVizで確認" class="md-nav__link">
-      VLP-16のデータをROS RVizで確認
-    </a>
   </li>
 
         
@@ -395,51 +381,37 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#docker_1" title="【Dockerの使い方】" class="md-nav__link">
-    【Dockerの使い方】
+  <a href="#autoware" title="【Autowareコンテナを起動】" class="md-nav__link">
+    【Autowareコンテナを起動】
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vlp-16ros-rviz_1" title="【VLP-16のデータをROS RVizで確認】" class="md-nav__link">
+    【VLP-16のデータをROS RVizで確認】
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#docker-pull" title="docker pull" class="md-nav__link">
-    docker pull
+  <a href="#ros" title="ROSを起動" class="md-nav__link">
+    ROSを起動
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#docker-images" title="docker images" class="md-nav__link">
-    docker images
+  <a href="#_1" title="コマンドラインでの確認" class="md-nav__link">
+    コマンドラインでの確認
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#docker-run" title="docker run" class="md-nav__link">
-    docker run
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-ps" title="docker ps" class="md-nav__link">
-    docker ps
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-start" title="docker start" class="md-nav__link">
-    docker start
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-stop" title="docker stop" class="md-nav__link">
-    docker stop
+  <a href="#rviz" title="RVizでの確認" class="md-nav__link">
+    RVizでの確認
   </a>
   
 </li>
@@ -466,39 +438,43 @@
               
                 
                 
-                <h1 id="docker">Docker の使い方</h1>
-<h2 id="docker_1">【Dockerの使い方】</h2>
-<h3 id="docker-pull">docker pull</h3>
-<p>docker imageをダウンロード/更新する時に使います。<br></p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo docker pull naisy/tx2-jp33-autoware:1.9.1
+                <h1 id="vlp-16ros-rviz">VLP-16のデータをROS RVizで確認</h1>
+<hr>
+
+<h2 id="autoware">【Autowareコンテナを起動】</h2>
+<p>AutowareコンテナにはROS一式をインストールしてあるので、ROSをそのまま使うことができます。<br></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>docker start CONTAINER_ID
 </pre></div></td></tr></table></p>
-<h3 id="docker-images">docker images</h3>
-<p>保有しているdocker imageの一覧を表示する時に使います。<br></p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo docker images
+<p><code>setfacl.sh</code>を実行してハードウェアパーミッションの変更を行います。<br></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo su
+/home/ubuntu/scripts/setfacl.sh
+exit
 </pre></div></td></tr></table></p>
-<p>dockerではイメージを基にコンテナを作成して、コンテナを利用することになります。</p>
-<h3 id="docker-run">docker run</h3>
-<p>イメージからコンテナを作成する時に使います。<br>
-また、このコマンドによりコンテナが起動した状態になります。<br>
-dockerで実行される実体がコンテナになります。<br></p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo docker run IMAGE_ID
+<h2 id="vlp-16ros-rviz_1">【VLP-16のデータをROS RVizで確認】</h2>
+<h3 id="ros">ROSを起動</h3>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>roslaunch velodyne_pointcloud VLP16_points.launch
 </pre></div></td></tr></table></p>
-<p>IMAGE_IDの部分はイメージタグでも可能です。</p>
-<h3 id="docker-ps">docker ps</h3>
-<p>コンテナ一覧を表示する時に使います。<br>
-起動中か停止中か、どのイメージがベースなのかも確認できます。<br></p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo docker ps -a
+<h3 id="_1">コマンドラインでの確認</h3>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span>rosnode list
+rostopic list
+rostopic echo /velodyne_points
 </pre></div></td></tr></table></p>
-<h3 id="docker-start">docker start</h3>
-<p>コンテナを起動する時に使います。<br></p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo docker start CONTAINER_ID
+<h3 id="rviz">RVizでの確認</h3>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>rosrun rviz rviz -f velodyne
 </pre></div></td></tr></table></p>
-<h3 id="docker-stop">docker stop</h3>
-<p>コンテナを終了する時に使います。<br></p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo docker stop CONTAINER_ID
-</pre></div></td></tr></table></p>
-<p>Autowareの場合、xtermをベースプロセスに指定しているため、最初に起動したxtermを終了するとコンテナも終了します。
-<hr></p>
+<p>rviz画面左下の方にあるAddボタンを押して、PointCloud2の項目を追加します。<br>
+<img alt="" src="../img/1_rviz_add.png" />
+<img alt="" src="../img/2_rviz_choose.png" /></p>
+<p>PointCloud2項目のTopic項目に/velodyne_pointsを入力してrviz画面にVLP-16の値を表示します。<br>
+<img alt="" src="../img/3_rviz_topic.png" /></p>
+<p>左：rosrun、右：AutowareのRViz<br>
+<img alt="" src="../img/rviz_and_autoware_vlp-16.png" />
+Autowareではトピック名の変換が行われていますが、rawデータは同じものとなります。<br></p>
+<hr>
                 
                   
                 
@@ -519,7 +495,7 @@ dockerで実行される実体がコンテナになります。<br></p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../01.Autoware_Install/" title="Autoware インストール" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../00.Network/" title="VLP-16 ネットワーク設定" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -528,25 +504,11 @@ dockerで実行される実体がコンテナになります。<br></p>
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                Autoware インストール
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../../01.Velodyne_VLP-16/00.Network/" title="VLP-16 ネットワーク設定" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  次
-                </span>
                 VLP-16 ネットワーク設定
               </span>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
           </a>
+        
         
       </nav>
     </div>

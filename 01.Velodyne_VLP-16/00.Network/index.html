@@ -36,7 +36,7 @@
     
     
       
-        <title>Docker の使い方 - Autoware Docs</title>
+        <title>VLP-16 ネットワーク設定 - Autoware Docs</title>
       
     
     
@@ -79,7 +79,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#docker" tabindex="1" class="md-skip">
+      <a href="#vlp-16" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -104,7 +104,7 @@
               Autoware Docs
             </span>
             <span class="md-header-nav__topic">
-              Docker の使い方
+              VLP-16 ネットワーク設定
             </span>
           
         </div>
@@ -182,12 +182,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       00.Install
@@ -205,7 +203,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../00.TX2_setup/" title="Jetson TX2 セットアップ" class="md-nav__link">
+    <a href="../../00.Install/00.TX2_setup/" title="Jetson TX2 セットアップ" class="md-nav__link">
       Jetson TX2 セットアップ
     </a>
   </li>
@@ -217,11 +215,49 @@
 
 
   <li class="md-nav__item">
-    <a href="../01.Autoware_Install/" title="Autoware インストール" class="md-nav__link">
+    <a href="../../00.Install/01.Autoware_Install/" title="Autoware インストール" class="md-nav__link">
       Autoware インストール
     </a>
   </li>
 
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../00.Install/02.Docker/" title="Docker の使い方" class="md-nav__link">
+      Docker の使い方
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      01.Velodyne VLP 16
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        01.Velodyne VLP 16
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
         
           
           
@@ -238,11 +274,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Docker の使い方
+        VLP-16 ネットワーク設定
       </label>
     
-    <a href="./" title="Docker の使い方" class="md-nav__link md-nav__link--active">
-      Docker の使い方
+    <a href="./" title="VLP-16 ネットワーク設定" class="md-nav__link md-nav__link--active">
+      VLP-16 ネットワーク設定
     </a>
     
       
@@ -256,57 +292,44 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#docker_1" title="【Dockerの使い方】" class="md-nav__link">
-    【Dockerの使い方】
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker-pull" title="docker pull" class="md-nav__link">
-    docker pull
+  <a href="#_1" title="【目標】" class="md-nav__link">
+    【目標】
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-images" title="docker images" class="md-nav__link">
-    docker images
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="【必要なもの】" class="md-nav__link">
+    【必要なもの】
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-run" title="docker run" class="md-nav__link">
-    docker run
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="【画像】" class="md-nav__link">
+    【画像】
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-ps" title="docker ps" class="md-nav__link">
-    docker ps
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu" title="【Ubuntuネットワーク作成】" class="md-nav__link">
+    【Ubuntuネットワーク作成】
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-start" title="docker start" class="md-nav__link">
-    docker start
+      
+        <li class="md-nav__item">
+  <a href="#vlp-16_1" title="【VLP-16設定】" class="md-nav__link">
+    【VLP-16設定】
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-stop" title="docker stop" class="md-nav__link">
-    docker stop
+      
+        <li class="md-nav__item">
+  <a href="#vlp-16_2" title="【VLP-16 製品仕様】" class="md-nav__link">
+    【VLP-16 製品仕様】
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -321,49 +344,13 @@
   </li>
 
         
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
-    <label class="md-nav__link" for="nav-3">
-      01.Velodyne VLP 16
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        01.Velodyne VLP 16
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
           
           
           
 
 
   <li class="md-nav__item">
-    <a href="../../01.Velodyne_VLP-16/00.Network/" title="VLP-16 ネットワーク設定" class="md-nav__link">
-      VLP-16 ネットワーク設定
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../01.Velodyne_VLP-16/01.Ros_rviz/" title="VLP-16のデータをROS RVizで確認" class="md-nav__link">
+    <a href="../01.Ros_rviz/" title="VLP-16のデータをROS RVizで確認" class="md-nav__link">
       VLP-16のデータをROS RVizで確認
     </a>
   </li>
@@ -395,57 +382,44 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#docker_1" title="【Dockerの使い方】" class="md-nav__link">
-    【Dockerの使い方】
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker-pull" title="docker pull" class="md-nav__link">
-    docker pull
+  <a href="#_1" title="【目標】" class="md-nav__link">
+    【目標】
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-images" title="docker images" class="md-nav__link">
-    docker images
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="【必要なもの】" class="md-nav__link">
+    【必要なもの】
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-run" title="docker run" class="md-nav__link">
-    docker run
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="【画像】" class="md-nav__link">
+    【画像】
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-ps" title="docker ps" class="md-nav__link">
-    docker ps
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu" title="【Ubuntuネットワーク作成】" class="md-nav__link">
+    【Ubuntuネットワーク作成】
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-start" title="docker start" class="md-nav__link">
-    docker start
+      
+        <li class="md-nav__item">
+  <a href="#vlp-16_1" title="【VLP-16設定】" class="md-nav__link">
+    【VLP-16設定】
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-stop" title="docker stop" class="md-nav__link">
-    docker stop
+      
+        <li class="md-nav__item">
+  <a href="#vlp-16_2" title="【VLP-16 製品仕様】" class="md-nav__link">
+    【VLP-16 製品仕様】
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -466,39 +440,73 @@
               
                 
                 
-                <h1 id="docker">Docker の使い方</h1>
-<h2 id="docker_1">【Dockerの使い方】</h2>
-<h3 id="docker-pull">docker pull</h3>
-<p>docker imageをダウンロード/更新する時に使います。<br></p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo docker pull naisy/tx2-jp33-autoware:1.9.1
-</pre></div></td></tr></table></p>
-<h3 id="docker-images">docker images</h3>
-<p>保有しているdocker imageの一覧を表示する時に使います。<br></p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo docker images
-</pre></div></td></tr></table></p>
-<p>dockerではイメージを基にコンテナを作成して、コンテナを利用することになります。</p>
-<h3 id="docker-run">docker run</h3>
-<p>イメージからコンテナを作成する時に使います。<br>
-また、このコマンドによりコンテナが起動した状態になります。<br>
-dockerで実行される実体がコンテナになります。<br></p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo docker run IMAGE_ID
-</pre></div></td></tr></table></p>
-<p>IMAGE_IDの部分はイメージタグでも可能です。</p>
-<h3 id="docker-ps">docker ps</h3>
-<p>コンテナ一覧を表示する時に使います。<br>
-起動中か停止中か、どのイメージがベースなのかも確認できます。<br></p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo docker ps -a
-</pre></div></td></tr></table></p>
-<h3 id="docker-start">docker start</h3>
-<p>コンテナを起動する時に使います。<br></p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo docker start CONTAINER_ID
-</pre></div></td></tr></table></p>
-<h3 id="docker-stop">docker stop</h3>
-<p>コンテナを終了する時に使います。<br></p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo docker stop CONTAINER_ID
-</pre></div></td></tr></table></p>
-<p>Autowareの場合、xtermをベースプロセスに指定しているため、最初に起動したxtermを終了するとコンテナも終了します。
+                <h1 id="vlp-16">VLP-16 ネットワーク設定</h1>
+<hr>
+
+<h2 id="_1">【目標】</h2>
+<p>ROSでVelodyne VLP-16が利用できることを確認する。</p>
+<h2 id="_2">【必要なもの】</h2>
+<ul>
+<li>Velodyne VLP-16<br></li>
+<li>Autoware用のTX2、もしくはROS KineticをインストールしたPC
+<hr></li>
+</ul>
+<h2 id="_3">【画像】</h2>
+<p><img alt="" src="../img/vlp-16.jpg" />
 <hr></p>
+<h2 id="ubuntu">【Ubuntuネットワーク作成】</h2>
+<p>UbuntuからVLP-16にアクセスするためのネットワークを作成します。<br>
+PCのIPアドレスを10.0.0.2に固定にします。<br>
+<img alt="" src="../img/network1.png" />
+WiFiをインターネットに接続し、LANをVLP-16に接続した状態にします。<br>
+TX2のWiFiは非常に遅いため、インターネット用のLANも作成しておくと便利です。<br>
+データ転送時間：WiFi 1時間 -&gt; LAN 10分に短縮<br></p>
+<h2 id="vlp-16_1">【VLP-16設定】</h2>
+<p>VLP-16の工場出荷時の設定では、マルチキャスト配信になっています。<br>
+これは家庭用NECルータでは処理できず、ネットワークがダウンしてしまうため、10.0.0.2に対してセンサー情報を流すように設定します。<br>
+<img alt="" src="../img/network2.png" />
+設定後、VLP-16の電源を入れ直します。<br></p>
+<p>ネットワーク上にVLP-16があることを確認します。<br></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo apt-get install arp-scan
+sudo arp-scan -l
+</pre></div></td></tr></table></p>
+<blockquote>
+<p>10.0.0.202    60:76:88:10:5f:83   Velodyne<br></p>
+</blockquote>
+<h2 id="vlp-16_2">【VLP-16 製品仕様】</h2>
+<p><a href="https://www.argocorp.com/cam/special/Velodyne/common/pdf/VLP-16.pdf">https://www.argocorp.com/cam/special/Velodyne/common/pdf/VLP-16.pdf</a></p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>電源</td>
+<td>DC 9-18V</td>
+</tr>
+<tr>
+<td>消費電力量</td>
+<td>8W</td>
+</tr>
+<tr>
+<td>測定ポイント数</td>
+<td>30万ポイント/秒</td>
+</tr>
+<tr>
+<td>測定精度</td>
+<td>25m距離で誤差3cm</td>
+</tr>
+<tr>
+<td>測定距離</td>
+<td>100m</td>
+</tr>
+</tbody>
+</table>
+<hr>
                 
                   
                 
@@ -519,7 +527,7 @@ dockerで実行される実体がコンテナになります。<br></p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../01.Autoware_Install/" title="Autoware インストール" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../00.Install/02.Docker/" title="Docker の使い方" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -528,19 +536,19 @@ dockerで実行される実体がコンテナになります。<br></p>
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                Autoware インストール
+                Docker の使い方
               </span>
             </div>
           </a>
         
         
-          <a href="../../01.Velodyne_VLP-16/00.Network/" title="VLP-16 ネットワーク設定" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../01.Ros_rviz/" title="VLP-16のデータをROS RVizで確認" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                VLP-16 ネットワーク設定
+                VLP-16のデータをROS RVizで確認
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
