@@ -1,0 +1,784 @@
+
+
+
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="クリップボードへコピー">
+      
+        <meta name="lang:clipboard.copied" content="コピーしました">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="何も見つかりませんでした">
+      
+        <meta name="lang:search.result.one" content="1件見つかりました">
+      
+        <meta name="lang:search.result.other" content="#件見つかりました">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-　、。，．]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+    
+    
+      
+        <title>Jetson TX2 セットアップ - Autoware Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.3020aac5.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#jetson-tx2" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Autoware Docs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Autoware Docs
+            </span>
+            <span class="md-header-nav__topic">
+              Jetson TX2 セットアップ
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            検索キーワードを入力してください
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Autoware Docs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Autoware Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Autoware Docs" class="md-nav__link">
+      Autoware Docs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      00.Install
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        00.Install
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Jetson TX2 セットアップ
+      </label>
+    
+    <a href="./" title="Jetson TX2 セットアップ" class="md-nav__link md-nav__link--active">
+      Jetson TX2 セットアップ
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="【目標】" class="md-nav__link">
+    【目標】
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="【構成思想】" class="md-nav__link">
+    【構成思想】
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="【必要なもの】" class="md-nav__link">
+    【必要なもの】
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="【画像】" class="md-nav__link">
+    【画像】
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jetpack-33l4t-2821" title="【JetPack 3.3/L4T 28.2.1】" class="md-nav__link">
+    【JetPack 3.3/L4T 28.2.1】
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nvme-m2-ssd" title="【NVMe M.2 SSD】" class="md-nav__link">
+    【NVMe M.2 SSD】
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="装着" class="md-nav__link">
+    装着
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="マウント" class="md-nav__link">
+    マウント
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dockerssd" title="【DockerのディレクトリをSSDに変更】" class="md-nav__link">
+    【DockerのディレクトリをSSDに変更】
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker" title="dockerを停止" class="md-nav__link">
+    dockerを停止
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dockerservice" title="docker.serviceを編集" class="md-nav__link">
+    docker.serviceを編集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="設定をリロード" class="md-nav__link">
+    設定をリロード
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker_1" title="dockerサービス起動" class="md-nav__link">
+    dockerサービス起動
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#max-n" title="【MAX-Nモード】" class="md-nav__link">
+    【MAX-Nモード】
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xauthority" title="【Xauthority】" class="md-nav__link">
+    【Xauthority】
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu" title="ubuntuユーザ" class="md-nav__link">
+    ubuntuユーザ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root" title="rootユーザ" class="md-nav__link">
+    rootユーザ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../01.Autoware_Install/" title="Autoware インストール" class="md-nav__link">
+      Autoware インストール
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02.Docker/" title="Docker の使い方" class="md-nav__link">
+      Docker の使い方
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="【目標】" class="md-nav__link">
+    【目標】
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="【構成思想】" class="md-nav__link">
+    【構成思想】
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="【必要なもの】" class="md-nav__link">
+    【必要なもの】
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="【画像】" class="md-nav__link">
+    【画像】
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jetpack-33l4t-2821" title="【JetPack 3.3/L4T 28.2.1】" class="md-nav__link">
+    【JetPack 3.3/L4T 28.2.1】
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nvme-m2-ssd" title="【NVMe M.2 SSD】" class="md-nav__link">
+    【NVMe M.2 SSD】
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="装着" class="md-nav__link">
+    装着
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="マウント" class="md-nav__link">
+    マウント
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dockerssd" title="【DockerのディレクトリをSSDに変更】" class="md-nav__link">
+    【DockerのディレクトリをSSDに変更】
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker" title="dockerを停止" class="md-nav__link">
+    dockerを停止
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dockerservice" title="docker.serviceを編集" class="md-nav__link">
+    docker.serviceを編集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="設定をリロード" class="md-nav__link">
+    設定をリロード
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker_1" title="dockerサービス起動" class="md-nav__link">
+    dockerサービス起動
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#max-n" title="【MAX-Nモード】" class="md-nav__link">
+    【MAX-Nモード】
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xauthority" title="【Xauthority】" class="md-nav__link">
+    【Xauthority】
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu" title="ubuntuユーザ" class="md-nav__link">
+    ubuntuユーザ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root" title="rootユーザ" class="md-nav__link">
+    rootユーザ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="jetson-tx2">Jetson TX2 セットアップ</h1>
+<hr>
+
+<h2 id="_1">【目標】</h2>
+<p>Jetson TX2にSSDを搭載して、DockerでAutoware 1.9.1をインストールする。<br></p>
+<h2 id="_2">【構成思想】</h2>
+<table>
+<thead>
+<tr>
+<th>ハードウェア</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jetson TX2</td>
+<td>ラジコンに搭載可能なサイズのため</td>
+</tr>
+<tr>
+<td>NVMe M.2 SSD</td>
+<td>LiDAR情報をROSBAGで保存する際に、容量と書き込み速度の確保のために必要</td>
+</tr>
+<tr>
+<td>NVMe M.2 to PCIe x4 Adapter</td>
+<td>Jetson TX2のM.2スロットはWiFiカード用のKey Eであり、NVMe SSDのKey Mは認識しない。Jetson TX2にNVMe M.2 SSDを搭載するために必要</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">【必要なもの】</h2>
+<ul>
+<li>Jetson TX2<br></li>
+<li>JetPack 3.3/L4T 28.2.1<br></li>
+<li>NVMe M.2 SSD<br></li>
+<li>NVMe M.2 to PCIe x4 Adapter<br>
+<hr></li>
+</ul>
+<h2 id="_4">【画像】</h2>
+<p><img alt="" src="../img/jetson-tx2.jpg" />
+<hr></p>
+<h2 id="jetpack-33l4t-2821">【JetPack 3.3/L4T 28.2.1】</h2>
+<p>インストール方法はNVIDIAが公開しているためそれに従ってインストールを行う。<br>
+URL:<br>
+<a href="https://devtalk.nvidia.com/default/topic/1037811/jetson-tx2/jetpack-3-3-mdash-l4t-r28-2-1-release-for-jetson-tx1-tx2/">https://devtalk.nvidia.com/default/topic/1037811/jetson-tx2/jetpack-3-3-mdash-l4t-r28-2-1-release-for-jetson-tx1-tx2/</a>
+<hr></p>
+<h2 id="nvme-m2-ssd">【NVMe M.2 SSD】</h2>
+<h3 id="_5">装着</h3>
+<p>アダプターに装着してPCIe x4スロットに差し込む。<br>
+ラジコン走行時の振動で接触しなくなることがあるため、適当にテープで止めておく。<br>
+アダプターの青色LEDがまぶしいので適当に紙を貼っておく。<br></p>
+<h3 id="_6">マウント</h3>
+<p>GUIディスク管理ツールの<code>disks</code>を起動して、SSDのマウント先が<br>
+<code>/media/ubuntu/SSD_M2</code><br>
+となるように設定してください。<br>
+また、Jetson TX2が起動すると、自動的にマウントされるように設定してください。
+<img alt="" src="../img/disks.png" />
+<img alt="" src="../img/mount1.png" />
+<img alt="" src="../img/mount2.png" />
+<hr></p>
+<h2 id="dockerssd">【DockerのディレクトリをSSDに変更】</h2>
+<p>docker.serviceファイルを編集して、デフォルトディレクトリパスがSSDになるようにします。<br></p>
+<h3 id="docker">dockerを停止</h3>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo service docker stop
+</pre></div></td></tr></table></p>
+<h3 id="dockerservice">docker.serviceを編集</h3>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo vi /lib/systemd/system/docker.service
+</pre></div></td></tr></table></p>
+<p>before:<br></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>ExecStart=/usr/bin/dockerd -H fd://
+</pre></div></td></tr></table></p>
+<p>after:<br></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>ExecStart=/usr/bin/dockerd -H fd:// -g /media/ubuntu/SSD_M2/docker
+</pre></div></td></tr></table></p>
+<h3 id="_7">設定をリロード</h3>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo systemctl daemon-reload
+</pre></div></td></tr></table></p>
+<h3 id="docker_1">dockerサービス起動</h3>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo service docker start
+</pre></div></td></tr></table></p>
+<hr>
+
+<h2 id="max-n">【MAX-Nモード】</h2>
+<p>Jetson TX2にはパフォーマンスと消費電力を切り替えるためのモードが用意されています。<br>
+その中で最大パフォーマンスとなるモードがMAX-Nモードになります。<br></p>
+<p>TX2をMAX-Nモードにする<br></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo nvpmodel -m 0
+sudo /home/ubuntu/jetson_clock.sh
+</pre></div></td></tr></table></p>
+<p>再起動後も動作モードは維持されますが、動作クロックは省エネモードになるため、動作クロックを最大に設定します。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo /home/ubuntu/jetson_clock.sh
+</pre></div></td></tr></table></p>
+<hr>
+
+<h2 id="xauthority">【Xauthority】</h2>
+<p>AutowareではGUIを使うので、Dockerでデスクトップ画面を利用するためにセキュリティ設定を行います。<br>
+このコマンドの実行はssh経由ではなく、デスクトップ上で行います。<br></p>
+<h3 id="ubuntu">ubuntuユーザ</h3>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span>touch $HOME/.docker.xauth
+xauth nlist $DISPLAY | sed -e &#39;s/^..../ffff/&#39; | xauth -f $HOME/.docker.xauth nmerge -
+</pre></div></td></tr></table></p>
+<h3 id="root">rootユーザ</h3>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo su
+touch $HOME/.docker.xauth
+xauth nlist $DISPLAY | sed -e &#39;s/^..../ffff/&#39; | xauth -f $HOME/.docker.xauth nmerge -
+</pre></div></td></tr></table></p>
+<hr>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../.." title="Autoware Docs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前
+                </span>
+                Autoware Docs
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../01.Autoware_Install/" title="Autoware インストール" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  次
+                </span>
+                Autoware インストール
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.dc02f8ce.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
