@@ -434,6 +434,54 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      03.WayPoint
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        03.WayPoint
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../03.WayPoint/00.recording/" title="走行データをROSBAGに保存" class="md-nav__link">
+      走行データをROSBAGに保存
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../03.WayPoint/01.waypoint/" title="走行経路を作成する" class="md-nav__link">
+      走行経路を作成する
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -543,6 +591,8 @@
 <hr></p>
 <h2 id="_4">【空間マップ記録】</h2>
 <p>VLP-16の値をROSBAGに保存します。<br>
+ラジコンの初期位置がマップの原点となるため、自己位置推定の開始位置も基本的に同じ位置になります。そのため、空間マップの記録開始位置が走行開始位置になるようにラジコンを置いてください。<br>
+マップ作成や自己位置推定は急激なポイントの変化に弱いです。そのため、曲がる時や急に視界が広がる所はゆっくり走行してください。<br>
 RVizでの確認は「VLP-16のデータをROS RVizで確認」の項目を参照してください。<br></p>
 <h3 id="roscore">roscoreを起動</h3>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>roscore&amp;
