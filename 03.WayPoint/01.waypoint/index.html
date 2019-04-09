@@ -412,14 +412,7 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" title="【必要なもの】" class="md-nav__link">
-    【必要なもの】
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" title="【画像】" class="md-nav__link">
+  <a href="#_2" title="【画像】" class="md-nav__link">
     【画像】
   </a>
   
@@ -437,6 +430,47 @@
     【Autowareの設定】
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simulation" title="[Simulation]タブ" class="md-nav__link">
+    [Simulation]タブ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup" title="[Setup]タブ" class="md-nav__link">
+    [Setup]タブ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" title="[Map]タブ" class="md-nav__link">
+    [Map]タブ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensing" title="[Sensing]タブ" class="md-nav__link">
+    [Sensing]タブ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computing" title="[Computing]タブ" class="md-nav__link">
+    [Computing]タブ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -447,7 +481,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" title="【走行経路を作成】" class="md-nav__link">
+  <a href="#_3" title="【走行経路を作成】" class="md-nav__link">
     【走行経路を作成】
   </a>
   
@@ -468,6 +502,42 @@
   
 </nav>
     
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      04.Autonomous Drive
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        04.Autonomous Drive
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../04.Autonomous_Drive/00.autoware/" title="Autowareの走行設定" class="md-nav__link">
+      Autowareの走行設定
+    </a>
   </li>
 
         
@@ -497,14 +567,7 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" title="【必要なもの】" class="md-nav__link">
-    【必要なもの】
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" title="【画像】" class="md-nav__link">
+  <a href="#_2" title="【画像】" class="md-nav__link">
     【画像】
   </a>
   
@@ -522,6 +585,47 @@
     【Autowareの設定】
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simulation" title="[Simulation]タブ" class="md-nav__link">
+    [Simulation]タブ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup" title="[Setup]タブ" class="md-nav__link">
+    [Setup]タブ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" title="[Map]タブ" class="md-nav__link">
+    [Map]タブ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensing" title="[Sensing]タブ" class="md-nav__link">
+    [Sensing]タブ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computing" title="[Computing]タブ" class="md-nav__link">
+    [Computing]タブ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -532,7 +636,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" title="【走行経路を作成】" class="md-nav__link">
+  <a href="#_3" title="【走行経路を作成】" class="md-nav__link">
     【走行経路を作成】
   </a>
   
@@ -565,13 +669,7 @@
                 <h1 id="_1">走行経路を作成する</h1>
 <hr>
 
-<h2 id="_2">【必要なもの】</h2>
-<ul>
-<li>Velodyne VLP-16<br></li>
-<li>空間マップ記録用のラジコン<br>
-<hr></li>
-</ul>
-<h2 id="_3">【画像】</h2>
+<h2 id="_2">【画像】</h2>
 <p><img alt="" src="../img/car.jpg" />
 <hr></p>
 <h2 id="autoware">【Autowareを起動】</h2>
@@ -582,19 +680,24 @@
 </pre></div></td></tr></table></p>
 <h2 id="autoware_1">【Autowareの設定】</h2>
 <p>Runtime Managerの[Simulation][Setup][Map][Sensing][Computing]タブの設定を行います。<br>
-ROSの時間軸をシミュレーション時間にするために、Autoware起動後は最初に[Simulation]タブの設定を行います。<br>
-[Simulation]タブで経路走行時のrosbagファイルを読み込みます。<br>
+ROSの時間軸をシミュレーション時間にするために、Autoware起動後は最初に[Simulation]タブの設定を行います。<br></p>
+<h3 id="simulation">[Simulation]タブ</h3>
+<p>[Simulation]タブで経路走行時のrosbagファイルを読み込みます。<br>
 一度[Play]ボタンを押した後、[Pause]ボタンを押します。ここはROSの時間軸をシミュレーション時間にするための方法なので、すぐに[Pause]を押して大丈夫です。<br>
-<img alt="" src="../img/simulation1.png" /><br>
-[Setup]タブでは[TF]と[Vehicle Model]を有効にします。<br>
+<img alt="" src="../img/simulation1.png" /><br></p>
+<h3 id="setup">[Setup]タブ</h3>
+<p>[Setup]タブでは[TF]と[Vehicle Model]を有効にします。<br>
 <img alt="" src="../img/setup2.png" /><br></p>
+<h3 id="map">[Map]タブ</h3>
 <p>[Map]タブでは[Point Cloud]ボタンと[TF]ボタンを有効にします。<br>
 [Point Cloud]はCloudCompareで編集したPCDファイルを指定します。<br>
-[TF]はAutowareに用意されている原点座標のファイルを指定します。<br>
+[TF]はAutowareに用意されている原点座標のファイル<code>Autoware/ros/src/.config/tf/tf_local.launch</code>を指定します。<br>
 <img alt="" src="../img/map1.png" /><br></p>
+<h3 id="sensing">[Sensing]タブ</h3>
 <p>[Sensing]タブでは[voxel_grid_filter]を有効にします。<br>
 VLP-16の値はシミュレーションの再生から得るため、実際のセンサとなる[Velodyne VLP-16]は無効にしておきます。<br>
 <img alt="" src="../img/sensing2.png" /><br></p>
+<h3 id="computing">[Computing]タブ</h3>
 <p>[Computing]タブでは[ndt_matching][vel_pose_connect][waypoint_saver]を有効にします。<br>
 [waypoint_saver]の[app]で出力に指定するファイルは新規ファイルになるようにしてください。<br>
 既存のファイルを指定すると追記されるため、読み込み時にCSVヘッダーが重複してフォーマットエラーとなります。<br>
@@ -603,20 +706,20 @@ VLP-16の値はシミュレーションの再生から得るため、実際の�
 <h2 id="rviz">【RVizの設定】</h2>
 <p>[RViz]ボタンを押してRVizを起動します。<br>
 Autowareに用意されている<code>Autoware/ros/src/.config/rviz/default.rviz</code>ファイルを読み込みます。<br>
-<img alt="" src="../img/rviz1.png" /><br>
 隠しディレクトリを表示するため、右クリックメニューで[Show hidden files]を有効にします。<br>
+<img alt="" src="../img/rviz1.png" /><br>
 <img alt="" src="../img/rviz2.png" /><br>
 <img alt="" src="../img/rviz3.png" /><br>
 シミュレーションを一次停止しているので画面には何も表示されませんが、これは正常です。<br>
-<img alt="" src="../img/rviz4.png" /><br>
-[Simulation]タブの[Pause]ボタンを時間を進めることで、RVizにマップが表示されます。<br>
+<img alt="" src="../img/rviz4.png" /><br></p>
+<p>[Simulation]タブの[Pause]ボタンを時間を進めることで、RVizにマップが表示されます。<br>
 <img alt="" src="../img/rviz5.png" /><br>
 ここで自己位置推定に失敗している場合は、一度[Simulation]タブの[Pause]を押して[Computing]タブの[ndt_matching]を無効にしてから再度有効にしてください。<br>
 <img alt="" src="../img/localization1.png" /><br>
 <img alt="" src="../img/localization2.png" /><br></p>
 <p>RViz画面に[waypoint_saver_maker]を追加して、waypointの作成を表示します。<br>
 <img alt="" src="../img/rviz6.png" /><br></p>
-<h2 id="_4">【走行経路を作成】</h2>
+<h2 id="_3">【走行経路を作成】</h2>
 <p>シミュレーションを進めてwaypointを作成します。<br>
 <img alt="" src="../img/rviz7.png" /><br>
 <img alt="" src="../img/rviz8.png" /><br></p>
@@ -658,6 +761,20 @@ Autowareに用意されている<code>Autoware/ros/src/.config/rviz/default.rviz
             </div>
           </a>
         
+        
+          <a href="../../04.Autonomous_Drive/00.autoware/" title="Autowareの走行設定" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  次
+                </span>
+                Autowareの走行設定
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
