@@ -36,7 +36,7 @@
     
     
       
-        <title>[Sensing]タブ - Autoware Docs</title>
+        <title>[Simulation]タブ - Autoware Docs</title>
       
     
     
@@ -79,7 +79,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#sensing" tabindex="1" class="md-skip">
+      <a href="#simulation" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -104,7 +104,7 @@
               Autoware Docs
             </span>
             <span class="md-header-nav__topic">
-              [Sensing]タブ
+              [Simulation]タブ
             </span>
           
         </div>
@@ -503,56 +503,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        [Sensing]タブ
-      </label>
-    
-    <a href="./" title="[Sensing]タブ" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../03.sensing/" title="[Sensing]タブ" class="md-nav__link">
       [Sensing]タブ
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">目次</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#velodyne-vlp-16" title="【Velodyne VLP-16】" class="md-nav__link">
-    【Velodyne VLP-16】
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#voxel_grid_filter" title="【voxel_grid_filter】" class="md-nav__link">
-    【voxel_grid_filter】
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -572,11 +527,49 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../05.simulation/" title="[Simulation]タブ" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        [Simulation]タブ
+      </label>
+    
+    <a href="./" title="[Simulation]タブ" class="md-nav__link md-nav__link--active">
       [Simulation]タブ
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rosbag-play" title="【ROSBAG Play】" class="md-nav__link">
+    【ROSBAG Play】
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -618,15 +611,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#velodyne-vlp-16" title="【Velodyne VLP-16】" class="md-nav__link">
-    【Velodyne VLP-16】
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#voxel_grid_filter" title="【voxel_grid_filter】" class="md-nav__link">
-    【voxel_grid_filter】
+  <a href="#rosbag-play" title="【ROSBAG Play】" class="md-nav__link">
+    【ROSBAG Play】
   </a>
   
 </li>
@@ -648,22 +634,17 @@
               
                 
                 
-                <h1 id="sensing">[Sensing]タブ</h1>
+                <h1 id="simulation">[Simulation]タブ</h1>
 <hr>
 
-<h2 id="velodyne-vlp-16">【Velodyne VLP-16】</h2>
-<p>[config]でVLP-16のキャリブレーションファイルを指定して、VLP-16を有効にします。<br>
-<code>~/Autoware/ros/src/sensing/drivers/lidar/packages/velodyne/velodyne_pointcloud/params/VLP16db.yaml</code>
-<img alt="" src="../img/sensing1.png" />
-<img alt="" src="../img/sensing2.png" /></p>
-<p><code>VLP16_hires_db.yaml</code>はVLP-16のハイレゾリューション版用のキャリブレーションで、これはセンサー自体が別物になります。<br></p>
-<h2 id="voxel_grid_filter">【voxel_grid_filter】</h2>
-<p>VLP-16は毎秒30万箇所の距離を計測します。<br>
-このポイント数を削減して処理速度を向上させます。<br>
-[voxel_grid_filter]の[app]をクリックして、[Voxel Leaf Size]を0.15(m)に変更します。<br>
-この値は小さいほど精度があがりますが、屋外のような広い空間では調整が必要になるかもしれません。<br>
-<img alt="" src="../img/sensing3.png" />
-<img alt="" src="../img/sensing4.png" /></p>
+<h2 id="rosbag-play">【ROSBAG Play】</h2>
+<p>走行経路を作成するときに使います。<br>
+走行を再現するときに使います。<br>
+3Dマップを作成するときに使います。しかし3DマップはBLAMで作ることにしたため、この場合は使いません。<br></p>
+<p>シミュレーションを再生するときは、[Setup]タブの[TF]が無効の状態で[Play]を押してください。<br>
+その後、[Setup]タブの[TF]を有効にしてください。<br>
+シミュレーションを使う時に、うまくいかない場合はAutowareを再起動してください。<br></p>
+<p><img alt="" src="../img/simulation1.png" /><br></p>
 <hr>
                 
                   
@@ -685,7 +666,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../02.map/" title="[Map]タブ" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../04.computing/" title="[Computing]タブ" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -694,19 +675,19 @@
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                [Map]タブ
+                [Computing]タブ
               </span>
             </div>
           </a>
         
         
-          <a href="../04.computing/" title="[Computing]タブ" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../06.topics/" title="[Topics]タブ" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                [Computing]タブ
+                [Topics]タブ
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

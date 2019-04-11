@@ -561,6 +561,30 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../05.simulation/" title="[Simulation]タブ" class="md-nav__link">
+      [Simulation]タブ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../06.topics/" title="[Topics]タブ" class="md-nav__link">
+      [Topics]タブ
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -616,10 +640,54 @@
 <h2 id="_2">【車両モデルの大きさを変更】</h2>
 <p>ラジコンの大きさに合わせて車両モデルのサイズを変更します。<br>
 <code>~/Autoware/ros/src/.config/model/default.urdf</code>を編集します。<br></p>
-<p>before<br>
-<img alt="" src="../img/car_model1.png" /><br></p>
-<p>after<br>
-<img alt="" src="../img/car_model2.png" /><br></p>
+<p>before:<br></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=cp>&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class=nt>&lt;robot</span> <span class=na>name=</span><span class=s>&quot;car&quot;</span><span class=nt>&gt;</span>
+  <span class=nt>&lt;link</span> <span class=na>name=</span><span class=s>&quot;base_link&quot;</span><span class=nt>&gt;</span>
+    <span class=nt>&lt;visual</span> <span class=na>name=</span><span class=s>&quot;base_visual&quot;</span><span class=nt>&gt;</span>
+      <span class=nt>&lt;origin</span> <span class=na>xyz=</span><span class=s>&quot;1 0 0.0&quot;</span> <span class=na>rpy=</span><span class=s>&quot;1.57 0 4.71&quot;</span> <span class=nt>/&gt;</span>
+      <span class=nt>&lt;geometry&gt;</span>
+        <span class=nt>&lt;mesh</span> <span class=na>filename=</span><span class=s>&quot;package://model_publisher/../../../.config/model/CAR_original.dae&quot;</span> <span class=na>scale=</span><span class=s>&quot;1.0 1.0 1.0&quot;</span><span class=nt>/&gt;</span>
+      <span class=nt>&lt;/geometry&gt;</span>
+    <span class=nt>&lt;/visual&gt;</span>
+  <span class=nt>&lt;/link&gt;</span>
+<span class=nt>&lt;/robot&gt;</span>
+</pre></div></td></tr></table></p>
+<p><img alt="" src="../img/car_model1.png" /><br></p>
+<p>after:<br></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=cp>&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class=nt>&lt;robot</span> <span class=na>name=</span><span class=s>&quot;car&quot;</span><span class=nt>&gt;</span>
+  <span class=nt>&lt;link</span> <span class=na>name=</span><span class=s>&quot;base_link&quot;</span><span class=nt>&gt;</span>
+    <span class=nt>&lt;visual</span> <span class=na>name=</span><span class=s>&quot;base_visual&quot;</span><span class=nt>&gt;</span>
+      <span class=nt>&lt;origin</span> <span class=na>xyz=</span><span class=s>&quot;0 0 0.0&quot;</span> <span class=na>rpy=</span><span class=s>&quot;1.57 0 4.71&quot;</span> <span class=nt>/&gt;</span>
+      <span class=nt>&lt;geometry&gt;</span>
+        <span class=nt>&lt;mesh</span> <span class=na>filename=</span><span class=s>&quot;package://model_publisher/../../../.config/model/CAR_original.dae&quot;</span> <span class=na>scale=</span><span class=s>&quot;0.2 0.2 0.2&quot;</span><span class=nt>/&gt;</span>
+      <span class=nt>&lt;/geometry&gt;</span>
+    <span class=nt>&lt;/visual&gt;</span>
+  <span class=nt>&lt;/link&gt;</span>
+<span class=nt>&lt;/robot&gt;</span>
+</pre></div></td></tr></table></p>
+<p><img alt="" src="../img/car_model2.png" /><br></p>
 <hr>
                 
                   

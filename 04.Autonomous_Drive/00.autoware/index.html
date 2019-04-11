@@ -664,6 +664,30 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../05.Autoware_parameters/05.simulation/" title="[Simulation]タブ" class="md-nav__link">
+      [Simulation]タブ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../05.Autoware_parameters/06.topics/" title="[Topics]タブ" class="md-nav__link">
+      [Topics]タブ
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -872,8 +896,8 @@ Autowareに用意されている<code>Autoware/ros/src/.config/rviz/default.rviz
 <h3 id="_4">目標速度と角速度</h3>
 <p>[Topic]タブの左側で[twist_cmd]をクリックします。<br>
 [Topic]タブの右側の[Echo]を有効にします。<br>
-<code>linear:x</code>の値は目標速度(m/s)になります。マイナスの値になることがありますが、Autoware 1.9.1にバック機能は無いため、abs()関数ですべてプラスになるように変換して使います。<br>
-<code>angular:z</code>の値は目標角速度(rad)になります。右カーブがマイナスで、左カーブがプラスになります。<br>
+<code>twist_cmd.twist.linear.x</code>が目標速度(m/s)になります。マイナスの値になることがありますが、Autoware 1.9.1にバック機能は無いため、abs()関数ですべてプラスになるように変換して使います。<br>
+<code>twist_cmd.twist.angular.z</code>が目標角速度(rad/s)になります。右カーブがマイナスで、左カーブがプラスになります。<br>
 ラジコン車両を制御する場合は、この値からモーターとサーボのPWM値に変換します。<br>
 しかし、それだけでは急発進したり、実際の速度が不一致になるため、現在の速度も考慮して車両制御コードを作成した方がよいです。<br>
 <img alt="" src="../img/topic1.png" /><br></p>
@@ -881,8 +905,8 @@ Autowareに用意されている<code>Autoware/ros/src/.config/rviz/default.rviz
 <p>[Topic]タブの左下にある[Reflesh]ボタンをクリックします。<br>
 [Topic]タブの左側で[current_velocity]をクリックします。<br>
 [Topic]タブの右側の[Echo]を有効にします。<br>
-<code>linear:x</code>の値は現在速度(m/s)になります。<br>
-<code>angular:z</code>の値は現在角速度(rad)になります。この値は使いません。<br>
+<code>current_velocity.twist.linear.x</code>が現在速度(m/s)になります。<br>
+<code>current_velocity.twist.angular.z</code>が現在角速度(rad/s)になります。この値は使いません。<br>
 自己位置推定の誤差により、停止状態でもこの値は変化があります。<br>
 ラジコン車両制御では、現在速度と目標速度の大小比較からモーターの出力を上下します。<br>
 また、現在速度が停止時の誤差を考慮した一定値以下であれば、モーターの最大出力を制限することで、急発進を抑制することが出来ます。<br>
